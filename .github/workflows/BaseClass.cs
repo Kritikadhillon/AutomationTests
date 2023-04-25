@@ -68,7 +68,7 @@ namespace SmartbuildAutomation
 
         public void Wait(int delay)
         {
-            // Causes the WebDriver to wait for at least a fixed delay
+            // Causes the WebDriver to wait for at least a fixed delays
             var now = DateTime.Now;
             var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(delay));
             wait.Until(_driver => (DateTime.Now - now) - TimeSpan.FromSeconds(delay) > TimeSpan.Zero);
